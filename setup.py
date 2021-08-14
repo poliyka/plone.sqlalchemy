@@ -46,6 +46,22 @@ setup(
     include_package_data=True,
     zip_safe=False,
     python_requires="==2.7, >=3.6",
+
+    # 需要先手動安裝
+    # sudo apt install alembic
+    # pip3 install zope.i18nmessageid
+
+    # MySql
+    # sudo apt install -y mysql-client
+    # sudo apt-get install libmysqlclient-dev
+    # sudo apt install libssl-dev
+    # sudo apt install libcrypto++-dev
+    # pip3 install mysqlclient
+
+    # postgresql
+    # pip3 install psycopg2-binary
+    # sudo apt install libpq-dev python3-dev
+    # pip3 install psycopg2
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
@@ -53,6 +69,10 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi < 8.0.0',
         'plone.app.dexterity',
+        'SQLAlchemy>=1.4.22',
+        'psycopg2>=2.9.1',
+        'mysqlclient>=2.0.3',
+        'sqlalchemy_mixins>=1.5',
     ],
     extras_require={
         'test': [
