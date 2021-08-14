@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plone.sqlalchemy">
+
+  -*- extra stuff goes here -*-
+
+  <browser:page
+    name="sqlalchemySettingControlPanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    permission="cmf.ManagePortal"
+    class=".sqlalchemySetting.SiteSettingControlPanelView"
+    layer="plone.sqlalchemy.interfaces.IPloneSqlalchemyLayer"
+  />
+
+</configure>

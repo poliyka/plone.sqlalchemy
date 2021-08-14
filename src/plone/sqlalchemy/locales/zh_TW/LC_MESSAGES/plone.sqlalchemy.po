@@ -20,7 +20,7 @@ msgstr ""
 
 #: ./configlet/sqlalchemySetting.py:27
 msgid "Sqlalchemy Settings"
-msgstr ""
+msgstr "Sqlalchemy 設定"
 
 #: ./configure.zcml:37
 msgid "Uninstalls the plone.sqlalchemy add-on."
@@ -28,7 +28,7 @@ msgstr ""
 
 #: ./configlet/sqlalchemySetting.py:15
 msgid "database path"
-msgstr ""
+msgstr "資料庫路徑"
 
 #: ./configlet/sqlalchemySetting.py:16
 msgid "https://docs.sqlalchemy.org/en/14/core/connections.html#basic-usage"
