@@ -1,6 +1,6 @@
-# plone.sqlalchemy
+# plone.sqlalchemy-14
 
-### 2021/07/01
+### 2021/01/01
 * 使用 sqlalchemy , alembic 來實現在 `Plone` 中使用ORM技術
 ---
 ### 2021/05/01
@@ -40,6 +40,8 @@ Library::
 SetupFile::
 ```h
     $ make install
+    輸入想要建立的專案位置ex. my.package
+    檔案會自動建立在專案內
 
     #如果想參考orm query 指令
 

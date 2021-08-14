@@ -14,7 +14,6 @@
   <!--<includeDependencies package="." />-->
 
   <include package=".browser" />
-  <include package=".configlet" />
 
   <include file="permissions.zcml" />
 
@@ -42,7 +41,6 @@
       />
 
   <!-- -*- extra stuff goes here -*- -->
-
-  <include package=".views" />
+  <include package=".configlet" />
 
 </configure>

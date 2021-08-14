@@ -13,14 +13,30 @@ domain_path = domain.replace(".", "/")
 if not os.path.exists(target_path):
     PathNotException("Package Path Not Exist")
 
-def _setup():
-    main_path = f"{target_path}/src/{domain_path}"
+def alter(file,old_str,new_str):
+    """
+    替換檔案中的字串
+    :param file:檔名
+    :param old_str:就字串
+    :param new_str:新字串
+    :return:
+    """
+    file_data = ""
+    with open(file, "r", encoding="utf-8") as f:
+        for line in f:
+            if old_str in line:
+                line = line.replace(old_str,new_str)
+            file_data += line
+    with open(file,"w",encoding="utf-8") as f:
+        f.write(file_data)
+
+def _setup(main_path):
     cmds = [
-        f"cp ./Makefile.cfg {main_path}/Makefile",
-        f"cp ./alembic.ini {main_path}/",
-        f"cp ./.isort.cfg {target_path}/src/",
-        f"cp -r ./models {main_path}/",
-        f"cp -r ./myAlembic {main_path}/",
+        f"cp -f ./Makefile.cfg {main_path}/Makefile",
+        f"cp -f ./alembic.ini {main_path}/",
+        f"cp -f ./.isort.cfg {target_path}/src/",
+        f"cp -rf ./models {main_path}/",
+        f"cp -rf ./myAlembic {main_path}/",
     ]
     for cmd in cmds:
         subprocess.call(
@@ -30,4 +46,9 @@ def _setup():
 
 
 if __name__ == "__main__":
-    _setup()
+    main_path = f"{target_path}/src/{domain_path}"
+    _setup(main_path)
+    alter(f"{main_path}/models/store.py", "my.package", domain)
+    alter(f"{main_path}/models/user.py", "my.package", domain)
+    alter(f"{main_path}/myAlembic/env.py", "my.package", domain)
+    print("All Done!")

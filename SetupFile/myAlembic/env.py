@@ -27,10 +27,10 @@ if package_path not in sys.path:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-from mingtak.ORM.models import Base
+from my.package.models import Base
 
-from mingtak.ORM.models.user import User, Address
-from mingtak.ORM.models.store import Store
+from my.package.models.user import User, Address
+from my.package.models.store import Store
 
 target_metadata = Base.metadata
 

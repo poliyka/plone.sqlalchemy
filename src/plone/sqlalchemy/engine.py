@@ -2,7 +2,7 @@ from plone import api
 from sqlalchemy import create_engine
 
 from sqlalchemy.orm import sessionmaker
-from plone.sqlalchemy.configlet.sqlalchemySetting.siteSetting import ISiteSetting
+from plone.sqlalchemy.configlet.sqlalchemySetting import ISiteSetting
 
 import contextlib
 
@@ -19,10 +19,10 @@ class Engine:
             raise DBStringNotExistException("db_string not exist")
 
         self.db = self._create_engine()
-        self.Session = sessionmaker(bind=self.engine)
+        self.session = sessionmaker(bind=self.db)()
 
     def _create_engine(self):
-        return create_engine(self.dbString, echo=True)
+        return create_engine(self.db_string, echo=True)
 
     @contextlib.contextmanager
     def transaction(self):

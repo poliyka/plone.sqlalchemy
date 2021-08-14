@@ -3,9 +3,9 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
-from mingtak.ORM.browser.engine import Engine
-from mingtak.ORM.models.user import User, Address
-from mingtak.ORM.models.store import Store, Tag
+from plone.sqlalachemy.engine import Engine
+from my.package.models.user import User, Address
+from my.package.models.store import Store, Tag
 from sqlalchemy.orm import aliased
 import sqlalchemy as sa
 

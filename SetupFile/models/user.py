@@ -1,6 +1,6 @@
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
-from mingtak.ORM.models import BaseModel
+from my.package.models import BaseModel
 import enum
 
 
