@@ -1,7 +1,15 @@
-# Mingtak.ORM
+# plone.sqlalchemy
 
-使用 sqlalchemy , alembic 來實現在 `Plone` 中使用ORM技術
-新增 sqlalchemy_mixins 套件 實現類似 `Django ORM` 方法
+### 2021/07/01
+* 使用 sqlalchemy , alembic 來實現在 `Plone` 中使用ORM技術
+---
+### 2021/05/01
+* 新增 sqlalchemy_mixins 套件 實現類似 `Django ORM` 方法
+
+---
+### 2021/08/14
+* 更新 sqlalchemy 1.4/2.0
+---
 
 # Installation
 
@@ -27,36 +35,25 @@ Library::
     # pip3 install psycopg2
 ```
 
-將mingtak.ORM/DemoFile 目錄下的檔案放到指定位置
+在plone.sqlalchemy/SetupFile 目錄下執行
 
-DemoFile::
+SetupFile::
 ```h
-    $cp Makefile ../your.package/src/your/package/
-
-    $cp alembic.ini ../your.package/src/your/package/
-
-    $cp -r models ../your.package/src/your/package/
-
-    $cp -r myAlembic ../your.package/src/your/package/
-
-    # 使用mrbob會自動跑isort，會有bug，加入.isort.cfg排除資料夾
-    $cp -r .isort.cfg ../your.package/src/
+    $ make install
 
     #如果想參考orm query 指令
 
-    $cp view.py ../your.package/src/your/package/browser/
-
+    $ cp alchemy_demo.py ../your.package/src/your/package/browser/
     #將他加入 configure.zcml
 ```
 
-將剛才所有複製的檔案文件中含 mingtak.ORM 改成 your.package
 
 # Usage
 
 1. 設定 alembic.ini
-[alembic](https://gitlab.com/mingtakco/mingtak.ORM/-/blob/master/DemoFile/alembic.ini#L45)
+[alembic](https://gitlab.com/mingtakco/plone.sqlalchemy/-/blob/master/DemoFile/alembic.ini#L45)
 
-2. 建立 models 參考 [user.py](https://gitlab.com/mingtakco/mingtak.ORM/-/blob/master/DemoFile/models/user.py) and [store.py](https://gitlab.com/mingtakco/mingtak.ORM/-/blob/master/DemoFile/models/store.py)
+2. 建立 models 參考 [user.py](https://gitlab.com/mingtakco/plone.sqlalchemy/-/blob/master/DemoFile/models/user.py) and [store.py](https://gitlab.com/mingtakco/plone.sqlalchemy/-/blob/master/DemoFile/models/store.py)
 
 3. 編輯 myAlembic/env.py
 
