@@ -8,9 +8,9 @@
 
   <browser:page
     name="alchemy-test"
-    for="Products.CMFCore.interfaces.IFolderish"
+    for="*"
     class=".alchemy_test.AlchemyTest"
-    permission="zope2.View"
+    permission="cmf.ManagePortal"
     />
 
 
