@@ -19,16 +19,15 @@ class Engine:
             raise DBStringNotExistException("db_string not exist")
 
         self.db = self._create_engine()
-        self.session = sessionmaker(bind=self.db)()
+        self.Session = sessionmaker(bind=self.db)
 
     def _create_engine(self):
-        return create_engine(self.db_string, echo=True)
+        return create_engine(self.db_string, echo=True, future=True)
 
     @contextlib.contextmanager
-    def transaction(self):
-        with self.db.connect() as connection:
-            if not connection.in_transaction():
-                with connection.begin():
-                    yield connection
-            else:
+    def transaction(self, connection):
+        if not connection.in_transaction():
+            with connection.begin():
                 yield connection
+        else:
+            yield connection

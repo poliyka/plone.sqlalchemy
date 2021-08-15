@@ -20,6 +20,7 @@ Library::
 ```h
     # 需要先手動安裝
     # sudo apt install alembic
+    # pip3 install SQLAlchemy>=1.4.22
     # pip3 install zope.i18nmessageid
 
     # MySql
