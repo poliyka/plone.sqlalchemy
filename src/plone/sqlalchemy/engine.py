@@ -5,8 +5,6 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 
 from plone.sqlalchemy.configlet.sqlalchemySetting import ISiteSetting
 
-import contextlib
-
 
 class DBStringNotExistException(Exception):
     """db_string not exist exception"""
@@ -38,12 +36,3 @@ class Engine:
 
     def _create_engine(self):
         return create_engine(self.db_string, echo=True, future=True)
-
-    @contextlib.contextmanager
-    def transaction(self):
-        print(f"=============={self.session.get_transaction()}===============")
-        if not self.session.get_transaction():
-            with self.session.begin() as session:
-                yield session
-        else:
-            yield self.session
