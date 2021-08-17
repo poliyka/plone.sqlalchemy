@@ -6,7 +6,7 @@ from setuptools import setup
 
 
 long_description = '\n\n'.join([
-    open('README.rst').read(),
+    open('README.md').read(),
     open('CONTRIBUTORS.rst').read(),
     open('CHANGES.rst').read(),
 ])
@@ -70,6 +70,7 @@ setup(
         'plone.restapi < 8.0.0',
         'plone.app.dexterity',
         'SQLAlchemy>=1.4.22',
+        'zope.sqlalchemy>=1.5',
         'psycopg2>=2.9.1',
         'mysqlclient>=2.0.3',
         'sqlalchemy_mixins>=1.5',
