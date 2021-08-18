@@ -20,9 +20,7 @@
 
 # Installation
 
-安裝 library
-
-Library::
+`Library`
 
 ```h
     //需要先手動安裝
@@ -43,9 +41,9 @@ Library::
     pip3 install psycopg2
 ```
 
-在 plone.sqlalchemy/SetupFile 目錄下執行
+`SetupFile`
 
-SetupFile::
+plone.sqlalchemy/SetupFile 目錄下執行
 
 ```h
     $ make install
@@ -65,11 +63,11 @@ SetupFile::
 
 3. 編輯 myAlembic/env.py
 
-4. 在 Plone 後台 configlet: ORM setting 設定 mysql://{account}:{password}@{localhost}:{port}/{database_name}?charset=utf8mb4
+4. Plone後台 configlet: ORM setting 設定 mysql://{account}:{password}@{localhost}:{port}/{database_name}?charset=utf8mb4
 
 # Makefile 同層目錄下使用 `make` 指令
 
-Makefile::
+`Makefile`
 
 ```h
     // 如同 git commit -m 'init' 依樣的功能
