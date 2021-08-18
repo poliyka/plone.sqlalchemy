@@ -1,9 +1,8 @@
 from plone import api
-from sqlalchemy import create_engine
-from zope.sqlalchemy import register
-from sqlalchemy.orm import sessionmaker, scoped_session
-
 from plone.sqlalchemy.configlet.sqlalchemySetting import ISiteSetting
+from sqlalchemy import create_engine
+from sqlalchemy.orm import scoped_session, sessionmaker
+from zope.sqlalchemy import register
 
 
 class DBStringNotExistException(Exception):

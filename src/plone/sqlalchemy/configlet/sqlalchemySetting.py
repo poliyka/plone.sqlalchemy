@@ -1,12 +1,12 @@
-from plone.app.registry.browser.controlpanel import RegistryEditForm
-from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
-
+from plone.app.registry.browser.controlpanel import (
+    ControlPanelFormWrapper,
+    RegistryEditForm,
+)
+from plone.sqlalchemy import _
 from plone.z3cform import layout
 from z3c.form import form
-from zope.interface import Interface
 from zope import schema
-
-from plone.sqlalchemy import _
+from zope.interface import Interface
 
 
 class ISiteSetting(Interface):
