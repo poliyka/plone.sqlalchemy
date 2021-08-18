@@ -1,5 +1,4 @@
 # plone.sqlalchemy-14
-test
 
 ### 2021/01/01
 * 使用 sqlalchemy , alembic 來實現在 `Plone` 中使用ORM技術
@@ -62,6 +61,8 @@ SetupFile::
 3. 編輯 myAlembic/env.py
 
 4. 在Plone 後台 configlet: ORM setting設定mysql://{account}:{password}@{localhost}:{port}/{database_name}?charset=utf8mb4
+
+5. 測試頁面 sqlalchemy_test
 
 # Makefile同層目錄下使用 `make` 指令
 
