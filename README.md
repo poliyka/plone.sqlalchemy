@@ -57,7 +57,7 @@ alchemy_demo_14.py
 # Usage
 
 1. 設定 alembic.ini
-   [alembic](https://github.com/poliyka/plone.sqlalchemy/blob/f18a66b6a23ed1bbc54676e3d24d84b630b7e85a/SetupFile/alembic.ini#L45)
+   [alembic](https://github.com/poliyka/plone.sqlalchemy/blob/f18a66b6a23ed1bbc54676e3d24d84b630b7e85a/SetupFile/alembic.ini#L42)
 
 2. 建立 models 參考 [user.py](https://github.com/poliyka/plone.sqlalchemy/blob/master/SetupFile/models/user.py) and [store.py](https://github.com/poliyka/plone.sqlalchemy/blob/master/SetupFile/models/store.py)
 
