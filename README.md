@@ -22,7 +22,7 @@
 
 `Library`
 
-```h
+```js
     //需要先手動安裝
     sudo apt install alembic
     pip3 install SQLAlchemy>=1.4.22
