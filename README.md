@@ -22,23 +22,23 @@
 
 `Library`
 
-```js
-    //需要先手動安裝
-    sudo apt install alembic
-    pip3 install SQLAlchemy>=1.4.22
-    pip3 install zope.i18nmessageid
+```h
+//需要先手動安裝
+sudo apt install alembic
+pip3 install SQLAlchemy>=1.4.22
+pip3 install zope.i18nmessageid
 
-    //MySql
-    sudo apt install -y mysql-client
-    sudo apt-get install libmysqlclient-dev
-    sudo apt install libssl-dev
-    sudo apt install libcrypto++-dev
-    pip3 install mysqlclient
+//MySql
+sudo apt install -y mysql-client
+sudo apt-get install libmysqlclient-dev
+sudo apt install libssl-dev
+sudo apt install libcrypto++-dev
+pip3 install mysqlclient
 
-    //postgresql
-    pip3 install psycopg2-binary
-    sudo apt install libpq-dev python3-dev
-    pip3 install psycopg2
+//postgresql
+pip3 install psycopg2-binary
+sudo apt install libpq-dev python3-dev
+pip3 install psycopg2
 ```
 
 `SetupFile`
@@ -46,12 +46,12 @@
 plone.sqlalchemy/SetupFile 目錄下執行
 
 ```h
-    $ make install
-    //輸入想要建立的專案位置ex. my.package
-    //檔案會自動建立在專案內
+$ make install
+//輸入想要建立的專案位置ex. my.package
+//檔案會自動建立在專案內
 
-    //如果想參考 Query Method 請參考
-    alchemy_demo_14.py
+//如果想參考 Query Method 請參考
+alchemy_demo_14.py
 ```
 
 # Usage
@@ -70,10 +70,10 @@ plone.sqlalchemy/SetupFile 目錄下執行
 `Makefile`
 
 ```h
-    // 如同 git commit -m 'init' 依樣的功能
-    // 會記錄變更在versions中
-    $ make migrate m=init
+// 如同 git commit -m 'init' 依樣的功能
+// 會記錄變更在versions中
+$ make migrate m=init
 
-    // upgrade to database
-    $ make upgrade
+// upgrade to database
+$ make upgrade
 ```
