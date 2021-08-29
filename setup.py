@@ -69,11 +69,11 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi < 8.0.0',
         'plone.app.dexterity',
-        'SQLAlchemy>=1.4.22',
-        'zope.sqlalchemy>=1.5',
-        'psycopg2>=2.9.1',
-        'mysqlclient>=2.0.3',
-        'sqlalchemy_mixins>=1.5',
+        'SQLAlchemy==1.4.23',
+        'zope.sqlalchemy==1.5',
+        'psycopg2==2.9.1',
+        'mysqlclient==2.0.3',
+        'sqlalchemy_mixins==1.5',
     ],
     extras_require={
         'test': [
