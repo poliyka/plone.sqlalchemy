@@ -36,7 +36,7 @@ def _setup(main_path):
         f"cp -f ./alembic.ini {main_path}/",
         f"cp -f ./.isort.cfg {target_path}/src/",
         f"cp -rf ./models {main_path}/",
-        f"cp -rf ./myAlembic {main_path}/",
+        f"cp -rf ./Alembic {main_path}/",
     ]
     for cmd in cmds:
         subprocess.call(
@@ -50,5 +50,5 @@ if __name__ == "__main__":
     _setup(main_path)
     alter(f"{main_path}/models/store.py", "my.package", domain)
     alter(f"{main_path}/models/user.py", "my.package", domain)
-    alter(f"{main_path}/myAlembic/env.py", "my.package", domain)
+    alter(f"{main_path}/Alembic/env.py", "my.package", domain)
     print("All Done!")

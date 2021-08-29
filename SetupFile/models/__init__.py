@@ -2,8 +2,9 @@ import configparser
 import os
 
 import sqlalchemy as sa
-from plone.sqlalchemy.engine import Engine
-from sqlalchemy.orm import declarative_mixin, declared_attr, registry, sessionmaker
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_mixin, declared_attr, registry
+from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy_mixins import AllFeaturesMixin
 
 
@@ -51,10 +52,11 @@ if not db_string:
     raise SqlalchemyUrlEmpty("[alembic] sqlalchemy.url not have value!")
 
 execution_options = {"isolation_level": "READ UNCOMMITTED", "logging_token": "SqlalchemyMixin"}
-engine = Engine(
-    db_string=db_string,
-    echo=True,
-    execution_options=execution_options,
+engine = create_engine(db_string, echo=True, future=True)
+Session = scoped_session(
+    sessionmaker(
+        bind=engine.execution_options(**execution_options), autocommit=True
+    )
 )
-session = engine.Session()
-BaseModel.set_session(session)
+BaseModel.set_session(Session())
+

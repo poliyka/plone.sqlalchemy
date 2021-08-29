@@ -61,7 +61,7 @@ alchemy_demo_14.py
 
 2. 建立 models 參考 [user.py](https://github.com/poliyka/plone.sqlalchemy/blob/master/SetupFile/models/user.py) and [store.py](https://github.com/poliyka/plone.sqlalchemy/blob/master/SetupFile/models/store.py)
 
-3. 編輯 myAlembic/env.py
+3. 編輯 Alembic/env.py
 
 4. Plone後台 configlet: ORM setting 設定 mysql://{account}:{password}@{localhost}:{port}/{database_name}?charset=utf8mb4
 
