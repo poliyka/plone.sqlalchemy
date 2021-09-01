@@ -25,7 +25,9 @@
 ```h
 //需要先手動安裝
 sudo apt install alembic
-pip3 install SQLAlchemy>=1.4.22
+pip3 install SQLAlchemy>=1.4.23
+pip3 install sqlalchemy_mixins>=1.5
+pip3 install zope.sqlalchemy>=1.5
 pip3 install zope.i18nmessageid
 
 //MySql
